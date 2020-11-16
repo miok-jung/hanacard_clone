@@ -1,65 +1,71 @@
-// GNB 
-window.onload = function (){
-	seq = 0;
-	nav = document.getElementById("gnb");
-	nav.menu = new Array();
-	nav.current = null;
-	nav.menuseq = 0;
-	navLen = nav.childNodes.length;
+/*  main.js */
+
+var aout = 1;
+var ulout = 1;
+
+function hideMenu(){
+	var mMenu = document.getElementById("gnb");
+	var lMenu = mMenu.childNodes;
+	var sMenu = mMenu.getElementsByTagName("ul");
 	
-	allA = nav.getElementsByTagName("a");
-	for(k = 0; k < allA.length; k++) {
-		allA.item(k).onmouseover = allA.item(k).onfocus = function () {
-			nav.isOver = true;
-		}
-		allA.item(k).onmouseout = allA.item(k).onblur = function () {
-			nav.isOver = false;
-			setTimeout(function () {
-				if (nav.isOver == false) {
-					if (nav.menu[seq])
-						nav.menu[seq].onmouseover();
-					else if(nav.current) {
-						menuImg = nav.current.childNodes.item(0);
-						menuImg.src = menuImg.src.replace("_ov.gif", ".gif");
-						if (nav.current.submenu)
-							nav.current.submenu.style.display = "none";
-						nav.current = null;
-					}
-				}
-			}, 500);
+	if(aout && ulout){
+		for(var j=0; j < sMenu.length; j++){
+			sMenu[j].style.display = "none";
 		}
 	}
-
-	for (i = 0; i < navLen; i++) {
-		navItem = nav.childNodes.item(i);
-		if (navItem.tagName != "LI")
-			continue;
-
-		navAnchor = navItem.getElementsByTagName("a").item(0);
-		navAnchor.submenu = navItem.getElementsByTagName("ul").item(0);
-		
-		navAnchor.onmouseover = navAnchor.onfocus = function () {
-			if (nav.current) {
-				menuImg = nav.current.childNodes.item(0);
-				menuImg.src = menuImg.src.replace("_ov.gif", ".gif");
-				if (nav.current.submenu)
-					nav.current.submenu.style.display = "none";
-				nav.current = null;
-			}
-			if (nav.current != this) {
-				menuImg = this.childNodes.item(0);
-				menuImg.src = menuImg.src.replace(".gif", "_ov.gif");
-				if (this.submenu)
-					this.submenu.style.display = "block";
-				nav.current = this;
-			}
-			nav.isOver = true;
-		}
-		nav.menuseq++;
-		nav.menu[nav.menuseq] = navAnchor;
-	}
-	if (nav.menu[seq])
-		nav.menu[seq].onmouseover();
 }
-
-
+window.onload = function(){
+	
+	var mMenu = document.getElementsByClassName("gnb"); //큰ul
+	var lMenu = mMenu.childNodes; //li 6
+	var sMenu = mMenu.getElementsByTagName("ul");
+	var sMenuCon = window.document.getElementsByClassName("navi");
+    var myAuto = null;
+	
+	//처음 하위 ul보이지 않게
+	
+	for( var i=0; i<lMenu.length; i++ ){
+		var node = lMenu.item(i);
+		
+		node.onmouseover = function(){			
+			for(var j=0;j<sMenu.length; j++){
+				
+				sMenu[j].style.display="none";
+			}
+						
+			var myNext = this.getElementsByTagName("ul");			
+			myNext[0].style.display = "block";
+		
+		}
+		
+		
+		
+		node.onmouseout =function(){
+			//안보이기
+			if(myAuto) clearTimeout(myAuto)
+			myAuto = setTimeout(hideMenu, 1000)
+			aout = 1;
+		}
+		
+	}
+	
+	for( var i=0; i<sMenuCon.length; i++ ){
+		var node2 = sMenuCon[i].childNodes[2];
+		var node3 = node2.childNodes;
+		
+		for( var j = 0; j< node3.length; j++ ){
+			
+			node3.item(j).onmouseover = function(){
+				//보이기
+				ulout = 0;
+			}
+			
+			node3.item(j).onmouseout = function(){
+				//안보이게
+				if(myAuto) clearTimeout(myAuto)
+				myAuto = setTimeout(hideMenu, 1000)
+				ulout = 1;
+			}
+		}
+	}
+}

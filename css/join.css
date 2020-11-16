@@ -1,57 +1,4 @@
-@import url(reset.css);
-
 /* join.css */
-
-/* common */
-body{font-size:12px; font-family:Dotum, "돋움", sans-serif; text-align:center;}
-a{text-decoration:none; color:#666;}
-a:hover{text-decoration:underline; color:#666;}
-
-/* layout */
-#wrap{width:100%; text-align:left;margin:0 auto;}
-	#header{position:relative;z-index:30; width:100%; margin:0 auto;}
-		.headerInner1{width:1200px; height:47px; margin:0 auto;}
-			.headerL{width:600px;float:left;}
-			.headerR{width:600px;float:right;}
-		.headerInner2{width:100%; height:70px;background-color:#00907f;}
-			.gnb{position:relative; width:1200px;margin:0 auto;}
-			.gnb ul{}
-	#container{position:relative;z-index:20; background-color:#f5f6f8; margin:0 auto;}
-		.homeL_innerJ{width:1200px;height:50px;margin:0 auto;}
-		.content{width:1140px;text-align:center;margin:0 auto;padding:30px 30px 50px;background:#fff;position:relative;}
-	#footer{width:100%;background:#f7f8f9;padding-bottom:50px;}
-		.foot_inner{position:relative;width:1200px;margin:0 auto;}
-		.foot_inner:after{content:"";display:block;clear:both;}
-
-/* header */
-/* 상단주메뉴 */
-.headerL ul{float:left; margin:0 auto; line-height:47px; padding:0px 0;}
-.headerL ul:after{content:""; display:block; clear:both;}
-.headerL ul li{float:left; width:55px; font-weight:bold;text-align:center;}
-.headerL ul li a:hover{background-color:#00907f; color:#fff; text-decoration:none; display:block; width:55px; height:47px;}
-.headerL ul li ul{}
-.headerR dl{float:right;}
-.headerR dl dd{float:left; height:23px; margin-top:11px; padding-left:20px;}
-
-/* 주메뉴, 로고 */
-h1{float:left; background-color:#00907f;padding-top:15px;}
-.gnb{}
-.gnb ul{padding:15px 50px 0;}
-.gnb ul.gnb2{}
-.gnb ul img{float:left;margin:10px 50px 0;}
-.gnb ul .navi{background:#333;}
-
-.gnb li ul{display:none;position:absolute;left:75px; top:30px;background:#fff;padding:20px;border:1px solid silver;}
-.gnb li ul li{line-height:30px;}
-
-.gnb li ul.sub1{left:150px;top:70px;}
-.gnb li ul.sub2{left:300px;top:70px;}
-.gnb li ul.sub3{left:400px;top:70px;}
-.gnb li ul.sub4{left:570px;top:70px;}
-.gnb li ul.sub5{left:700px;top:70px;}
-.gnb li ul.sub6{left:830px;top:70px;}
-.gnb li ul.sub7{left:1000px;top:70px;}
-
 /* conainer */
 /* 홈페이지,회원가입 상단링크 */
 p.homeL{line-height:50px;}
@@ -59,26 +6,22 @@ p.homeL a{text-decoration:none;font-weight:bold;}
 p.homeL img{margin-bottom:6px;}
 p.homeL img.homeL_btn{padding:3px 2.5px 2px;background:#fff;margin-top:3px;border:1px solid silver;}
 
-
-
-/* content */
-/* 휴대폰 인증_회원가입 */
 h2{font-size:12px; color:#00907f;line-height:30px;}
 h2 span{font-size:30px;font-weight:bold;color:#000;}
 p.join{margin:20px 0 30px;}
 
 /* 카드인증 */
-.card_certi{position:absolute;width:338px;height:57px;background:#404b57;left:93px;}
-.card_certi dt{text-align:center;line-height:58px;font-weight:bold;}
-dl.card_certi dt:hover{background:#2e3844;width:338px;height:57px;}
-.card_certi dt a{color:#fff;text-decoration:none;}
-.card_certi dt a:hover{padding:22.5px 0;}
+.card_certi{position:absolute;width:338px;height:57px;background:#f5f6f8;left:93px;}
+.card_certi dt{text-align:center;font-weight:bold;}
+
+.card_certi dt a{display:block;color:#666;text-decoration:none;line-height:58px;}
+.card_certi dt a:hover{background:#2e3844;color:#fff;width:338px; height:57px;}
 
 /* 휴대폰인증 */
 .auPhon{width:1010px;margin:0 auto;}
-.auPhon .auPhon_box{background:#404b57;width:338px;height:57px;text-align:center;line-height:58px;margin:0 auto;font-weight:bold;margin-bottom:50px;}
-.auPhon .auPhon_box:hover{background:#2e3844;width:338px;height:57px;}
-.auPhon .auPhon_box a{color:#fff;text-decoration:none;}
+.auPhon .auPhon_box{background:#404b57;width:338px;height:57px;line-height:57px;margin:0 auto;font-weight:bold;margin-bottom:50px;}
+.auPhon .auPhon_box a{color:#fff;text-decoration:none;display:block;}
+.auPhon .auPhon_box a:hover{background:#2e3844;color:#fff;}
 
 /* 휴대폰인증 table */
 form{margin:0 auto;}
@@ -86,7 +29,7 @@ form table{}
 form tr th{float:left;display:block;width:183px;height:71px;background:#dae6eb;border-bottom:1px solid #bccdd4;line-height:72px;padding-left:50px;font-weight:bold;}
 form tr.bold_line{border-top:2px solid #333;}
 form tr.bold_line th{}
-form tr.bold_line td{}
+form tr.bold_line td{height:51px;padding-top:20px;}
 
 form tr td{float:right;width:727px;height:71px;background:#f1f2f3;border-bottom:1px solid #bccdd4;text-align:left;line-height:72px;padding-left:50px;}
 form tr td input{height:29px;padding-top:1px;}
@@ -99,27 +42,10 @@ form tr.phonNumber td{height:200px;line-height:30px;padding-top:30px;}
 
 /* 아이핀 인증 */
 dl.IP_ce{}
-dl.IP_ce dt{width:338px;height:57px;text_aligh:center;line-height:58px;margin:0 auto;font-weight:bold;margin-bottom:50px;background:#404b57;position:absolute;right:93px;top:212px;}
-dl.IP_ce dt a{color:#fff;text-decoration:none;}
-dl.IP_ce dt:hover{background:#2e3844;width:338px;height:57px;}
+dl.IP_ce dt{width:338px;height:57px;line-height:57px;font-weight:bold;margin-bottom:50px;background:#f5f6f8;position:absolute;right:93px;top:212px;}
+dl.IP_ce dt a{color:#666;text-decoration:none;display:block;}
+dl.IP_ce dt a:hover{background:#2e3844;color:#fff;}
 
 
 /* 다음페이지 */
 .img_next{margin-top:50px;}
-/* footer */
-/* foot_inner */
-ul.foot_intro{padding:25px 0;}
-ul.foot_intro li{display:inline;padding-right:20px;font-size:15px;}
-ul.foot_intro li.import{font-weight:bold;}
-ul.foot_intro li a:hover{color:#209d8f;text-decoration:none;}
-address{width:820px;}
-address p{line-height:25px;}
-address p a{text-decoration:none;}
-address p a:hover{color:#209d8f;}
-ul.tropi{margin-top:25px;}
-ul.tropi li{display:block;float:left;font-size:11px;margin-right:15px;line-height:15px;}
-ul.tropi li img{float:left;margin-right:10px;}
-ul.tropi li span{float:right;margin-top:3px;}
-form.family{position:absolute;right:0;top:20px;}
-form.family select{height:23px;background:#eaeaea;position:relative;top:3px;}
-

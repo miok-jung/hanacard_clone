@@ -1,0 +1,22 @@
+/* footer.css */
+
+/* footer */
+/* foot_inner */
+ul.foot_intro{padding:25px 0;}
+ul.foot_intro li{display:inline;padding-right:20px;font-size:15px;}
+ul.foot_intro li.import{font-weight:bold;}
+ul.foot_intro li a:hover{color:#209d8f;text-decoration:none;}
+address{width:820px;}
+address p{line-height:25px;}
+address p a{text-decoration:none;}
+address p a:hover{color:#209d8f;}
+ul.tropi{margin-top:25px;}
+ul.tropi li{display:block;float:left;font-size:11px;margin-right:15px;line-height:15px;}
+ul.tropi li img{float:left;margin-right:10px;}
+ul.tropi li span{float:right;margin-top:3px;}
+form.family{position:absolute;right:0;top:20px;}
+form.family select{position:relative;top:3px;height:23px;background:#eaeaea;}
+
+@media print{
+	#header,.snb,.aside{display:none}
+}

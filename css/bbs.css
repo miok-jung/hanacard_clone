@@ -1,59 +1,8 @@
-@import url(reset.css);
-
 /* bbs.css */
 
-/* common */
-body{font-size:12px; font-family:Dotum, "돋움", sans-serif; text-align:center;}
-a{text-decoration:none; color:#666;}
-a:hover{text-decoration:underline; color:#666;}
-
-/* layout */
-#wrap{width:100%; text-align:left;margin:0 auto;}
-	#header{position:relative;z-index:30; width:100%; margin:0 auto;}
-		.headerInner1{width:1200px; height:47px; margin:0 auto;}
-			.headerL{width:600px;float:left;}
-			.headerR{width:600px;float:right;}
-		.headerInner2{width:100%; height:70px;background-color:#00907f;}
-			.gnb{position:relative; width:1200px;margin:0 auto;}
-			.gnb ul{}
-	#container{position:relative; z-index:20; background-color:#f5f6f8; margin:0 auto;}
-		.homeL_innerB{width:1200px;height:50px;margin:0 auto;}
-		.news_inner{width:1200px;margin:0 auto;background:#fff;padding-bottom:80px;}
-	#footer{width:100%;background:#f7f8f9;padding-bottom:50px;}
-		.foot_inner{position:relative;width:1200px;margin:0 auto;}
-		.foot_inner:after{content:"";display:block;clear:both;}
-
-/* header */
-/* 상단주메뉴 */
-.headerL ul{float:left; margin:0 auto; line-height:47px; padding:0px 0;}
-.headerL ul:after{content:""; display:block; clear:both;}
-.headerL ul li{float:left; width:55px; font-weight:bold;text-align:center;}
-.headerL ul li a:hover{background-color:#00907f; color:#fff; text-decoration:none; display:block; width:55px; height:47px;}
-.headerL ul li ul{}
-.headerR dl{float:right;}
-.headerR dl dd{float:left; height:23px; margin-top:11px; padding-left:20px;}
-
-/* 주메뉴, 로고 */
-h1{float:left; background-color:#00907f;padding-top:15px;}
-.gnb{}
-.gnb ul{padding:15px 50px 0;}
-.gnb ul.gnb2{}
-.gnb ul img{float:left;margin:10px 50px 0;}
-.gnb ul .navi{background:#333;}
-
-.gnb li ul{display:none;position:absolute;left:75px; top:30px;background:#fff;padding:20px;border:1px solid silver;}
-.gnb li ul li{line-height:30px;}
-
-.gnb li ul.sub1{left:150px;top:70px;}
-.gnb li ul.sub2{left:300px;top:70px;}
-.gnb li ul.sub3{left:400px;top:70px;}
-.gnb li ul.sub4{left:570px;top:70px;}
-.gnb li ul.sub5{left:700px;top:70px;}
-.gnb li ul.sub6{left:830px;top:70px;}
-.gnb li ul.sub7{left:1000px;top:70px;}
-
-/* conainer */
+/* container */
 /* 홈페이지,회원가입 상단링크 */
+#container{padding-bottom:25px;}
 p.homeL{line-height:50px;}
 p.homeL a{text-decoration:none;font-weight:bold;color:#333;}
 p.homeL img{margin-bottom:6px;}
@@ -65,8 +14,8 @@ h2 span{font-size:15px;color:#00907f;}
 
 dl{padding:0 95px;position:relative;}
 dl dt{width:503px; height:46px;background:#f5f6f8;color:#666;border:1px solid #d7d7d7;text-align:center;line-height:46px;font-weight:bold;}
-dl dt a{}
-dl dt a:hover{text-decoration:none;display:block;width:503px; height:46px;background:#2e3844;color:#fff;}
+dl dt a{display:block;}
+dl dt a:hover{text-decoration:none;width:503px; height:46px;background:#2e3844;color:#fff;}
 dl dt.news{}
 dl dt.service_ch{position:absolute;right:96px;top:-641px;}
 
@@ -84,37 +33,6 @@ p.pageNumber a{font-size:20px;paddign:10px 10px 10px 12px;margin-right:20px;}
 p.pageNumber img{border:1px solid silver;}
 p.pageNumber img:hover{border:1px solid #000;}
 p.pageNumver img a{}
-div.srch_inner form select{width:140px;height:41px;padding-bottom:3px;}
-div.srch_inner form input{width:450px;height:40px;}
-div.srch_inner form input.srch{width:19px; height:20px;background:#666;padding:10px 20.5px;}
-
-
-/*
-.news_inner dl dt a{text-decoration:none;color:#fff;line-height:58px;}
-
-.news_inner dl dt.news{width:505px; height:58px;background:#404b57;text-align:center;}
-
-.news_inner dl dt.service_ch{position:absolute;float:right;right:95px;top:-273px;width:505px; height:58px;background:#f5f6f8;text-align:center;margin-bottom:50px;color:#666;}
-.news_inner dl dt:hover{width:505px;height:58px;background:#2e3844;}
-.news_inner dl dd{}
-.news_inner dl dd table{margin:0 auto;}
-.news_inner .pageNumber{}
-.news_inner .srch{padding-bottom:80px;}
-
-*/
-/* footer */
-/* foot_inner */
-ul.foot_intro{padding:25px 0;}
-ul.foot_intro li{display:inline;padding-right:20px;font-size:15px;}
-ul.foot_intro li.import{font-weight:bold;}
-ul.foot_intro li a:hover{color:#209d8f;text-decoration:none;}
-address{width:820px;}
-address p{line-height:25px;}
-address p a{text-decoration:none;}
-address p a:hover{color:#209d8f;}
-ul.tropi{margin-top:25px;}
-ul.tropi li{display:block;float:left;font-size:11px;margin-right:15px;line-height:15px;}
-ul.tropi li img{float:left;margin-right:10px;}
-ul.tropi li span{float:right;margin-top:3px;}
-form.family{position:absolute;right:0;top:20px;}
-form.family select{height:23px;background:#eaeaea;position:relative;top:3px;}
+div.srch_inner form select{width:140px;height:43px;padding-bottom:12px;padding-top:8px;}
+div.srch_inner form input{width:450px;height:39px;}
+div.srch_inner form input.srch{width:19px; height:23px;background:#666;padding:10px 20.5px;}

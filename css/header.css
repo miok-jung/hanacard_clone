@@ -1,0 +1,35 @@
+/* header.css */
+
+/* header */
+/* 상단주메뉴 */
+.headerL ul{float:left; margin:0 auto; line-height:47px; padding:0px 0;}
+.headerL ul:after{content:""; display:block; clear:both;}
+.headerL ul li{float:left; width:55px; font-weight:bold;text-align:center;}
+.headerL ul li a{display:block;}
+.headerL ul li a:hover{background-color:#00907f; color:#fff; text-decoration:none; display:block; width:55px; height:47px;}
+.headerL ul li ul{}
+.headerR dl{float:right;}
+.headerR dl dd{float:left; height:23px; margin-top:11px; padding-left:20px;}
+
+/* 주메뉴, 로고 */
+.gnb{}
+h1{float:left; background-color:#00907f;padding-top:15px;}
+h1 > a{display:block;width:125px;height:35px;}
+	
+.gnb{}
+.gnb ul{height:inherit;}
+.gnb ul.gnb2{}
+.gnb ul .navi{display:inline-block;}
+.navi > a{color:#fff;font-size:15px;margin-left:100px;font-weight:bold;line-height:68px;}
+.navi a:hover{text-decoration:none;}
+
+.gnb li ul{position:absolute;left:75px; top:30px;background:#fff;padding:20px;display:none;border:1px solid silver;}
+.gnb li ul li{line-height:30px;}
+
+.gnb li ul.sub1{left:190px;top:70px;}
+.gnb li ul.sub2{left:325px;top:70px;}
+.gnb li ul.sub3{left:470px;top:70px;}
+.gnb li ul.sub4{left:655px;top:70px;}
+.gnb li ul.sub5{left:770px;top:70px;}
+.gnb li ul.sub6{left:915px;top:70px;}
+.gnb li ul.sub7{left:1060px;top:70px;}
